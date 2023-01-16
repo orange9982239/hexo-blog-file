@@ -60,7 +60,9 @@ tags:
 4. 產生查詢快取json
     ```bash
     # 產生靜態網頁跟全文查詢快取json
-    hexo clean & hexo g
+    hexo clean 
+    hexo generate
+    hexo deploy
     ```
 
 # 三、發佈
