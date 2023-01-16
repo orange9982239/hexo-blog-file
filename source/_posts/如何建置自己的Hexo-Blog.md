@@ -1,7 +1,10 @@
 ---
 title: 如何建置自己的Hexo Blog
 date: 2023-01-16 10:32:01
-tags:
+tags: 
+ - hexo
+ - hexo next theme
+ - github pages
 ---
 
 # 簡述
@@ -37,7 +40,6 @@ tags:
     theme: hexo-theme-next-8.14.1
     ```
 
-
 ## 全文查詢
 1. 安裝套件
     ```bash
@@ -63,9 +65,9 @@ tags:
     hexo server
 
     # 清除舊專案並發布
-    hexo clean 
-    hexo generate           #產生靜態網頁跟全文查詢快取json
-    hexo deploy
+    hexo clean              # 有安裝新的package或大改動才清理舊專案
+    hexo generate           # 產生靜態網頁跟全文查詢快取json
+    hexo deploy             # 設定完成就能下此指令發布
     ```
 
 # 三、發佈
