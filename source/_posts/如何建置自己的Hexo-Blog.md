@@ -53,22 +53,44 @@ tags:
     > 修改`檔案\_config.yml`
     ```yml
     search:
-    path: search.json
-    field: post
-    content: true
+        path: search.json
+        field: post
+        content: true
     ```
 4. 產生查詢快取json
     ```bash
-    # 產生靜態網頁跟全文查詢快取json
+    # 啟動伺服器，用來看結果
+    hexo server
+
+    # 清除舊專案並發布
     hexo clean 
-    hexo generate
+    hexo generate           #產生靜態網頁跟全文查詢快取json
     hexo deploy
     ```
 
 # 三、發佈
-## 1. 發佈 github pages
-> 如果剛好你也是個貧窮開發者，沒錢購買VM，github pages是個好地方~
+## 儲存程式碼
+在github上`建立兩個儲存庫`
+1. 儲存nmp source code，名稱隨意
+2. 儲存hexo發布的靜態文件，名稱<username>.github.io
 
+## 發佈 github pages
+> 如果剛好你也是個貧窮開發者，沒錢購買VM，github pages是個好地方
+1. 安裝 hexo-deployer-git。
+    ```bash
+    npm install hexo-deployer-git --save
+    ```
+2. 修改`檔案\_config.yml`
+    ```yml
+    deploy:
+        type: git
+        repo: <repository url>
+        branch: [branch]
+        message: [message]
+    ```
+3. 發布url 
+  > https://orange9982239.github.io/
 
 # REF
 * https://www.youtube.com/watch?v=RcJxnNpj64k&ab_channel=PegasusWang
+* https://hexo.io/zh-tw/docs/one-command-deployment.html
