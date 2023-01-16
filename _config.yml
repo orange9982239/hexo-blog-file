@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 柳書的blog
 subtitle: ''
 description: ''
 keywords:
@@ -102,7 +102,10 @@ theme: hexo-theme-next-8.14.1
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+    type: git
+    repo: git@github.com:orange9982239/orange9982239.github.io.git
+    branch: master
+    message: update
 
 search:
   path: search.json
